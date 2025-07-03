@@ -1,12 +1,13 @@
-# React + Vite
+# Project Planning
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a project kickoff planning.
 
-Currently, two official plugins are available:
+The project will follow this worklow:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- List all feature requirments with short description
+- Create wireframes in figma
+- Prioritize all features and start build the products with hard coded data first.
+- Improve features with dynamic-data
+- Improve visual
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Feature Priority
