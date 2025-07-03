@@ -4,6 +4,7 @@ const EntryForm = ({ localEntry, setLocalEntry }) => {
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [text, setText] = useState("");
+  const maxLength = 300;
 
   // console.log(title);
   // console.log(text);
@@ -56,6 +57,19 @@ const EntryForm = ({ localEntry, setLocalEntry }) => {
           className="textarea textarea-md"
           placeholder="Tell me about it"
         />
+        <div className="flex justify-between mt-2 text-sm text-gray-600">
+          <span>
+            Characters:
+            <span
+              className={`${
+                text.length >= 200 ? "text-yellow-600" : "text-gray-600"
+              }`}
+            >
+              {text.length}
+            </span>
+            /{maxLength}
+          </span>
+        </div>
         <button className="btn btn-primary">Submit</button>
       </form>
     </div>

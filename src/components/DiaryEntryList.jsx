@@ -1,21 +1,15 @@
 import DiaryCard from "./DiaryCard";
 
-function DiaryEntryList() {
+const DiaryEntryList = ({ localEntry }) => {
+  console.log(localEntry);
   return (
-    <div className="w-full flex flex-wrap gap-4">
+    <div className="w-full flex flex-wrap gap-4 justify-center">
       <h1>Your Diary Entry</h1>
-      <DiaryCard />
-      <DiaryCard />
-      <DiaryCard />
-
-      {/* <button
-        className="btn"
-        onClick={() => document.getElementById("my_modal_1").showModal()}
-      >
-        open modal
-      </button> */}
-    </div>
+      {localEntry.map((entry) => (
+        <DiaryCard key={entry.id} entry={entry} />
+      ))}
+    </div> //
   );
-}
+};
 
 export default DiaryEntryList;
