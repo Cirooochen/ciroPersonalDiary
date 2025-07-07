@@ -12,24 +12,32 @@ const Detail = () => {
   }, []);
 
   return (
-    <div className="card lg:card-side bg-base-100 shadow-sm">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp"
-          alt="Album"
-        />
-      </figure>
-      <div className="card-body">
-        <h2 className="card-title">{entryDetail.title}</h2>
-        <p>{entryDetail.text}</p>
-        <div className="card-actions justify-end">
+    <div className="min-h-screen bg-gray-50 p-8 flex flex-col">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Left: Image */}
+        <div className="overflow-hidden rounded-xl shadow">
+          <img
+            src={entryDetail.image}
+            alt={entryDetail.title}
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Right: Text */}
+        <div className="flex flex-col justify-between">
+          <div>
+            <p className="text-sm text-gray-500 mb-2">
+              {entryDetail.publishedAt}
+            </p>
+            <h1 className="text-4xl font-bold mb-4">{entryDetail.title}</h1>
+            <p className="text-gray-700 leading-relaxed">{entryDetail.text}</p>
+          </div>
+
           <button
-            onClick={() => {
-              navigate(-1);
-            }}
-            className="btn btn-primary"
+            onClick={() => navigate(-1)}
+            className="mt-8 self-start bg-gray-800 text-white px-6 py-3 rounded-full hover:bg-gray-700 transition"
           >
-            Listen
+            ← Back
           </button>
         </div>
       </div>

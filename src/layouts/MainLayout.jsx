@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import { Outlet } from "react-router";
 const MainLayout = () => {
   return (
-    <div>
+    <div className="bg-amber-50">
       <Navbar />
       <Outlet />
       <Footer />
