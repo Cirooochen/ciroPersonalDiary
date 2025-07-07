@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 const HomePage = ({ localEntry }) => {
   return (
     <div>
-      <Hero />
+      <Hero localEntry={localEntry} />
       <DiaryEntryList localEntry={localEntry} />
     </div>
   );
